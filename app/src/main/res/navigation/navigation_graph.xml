@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/baseFragment">
+
+    <fragment
+        android:id="@+id/baseFragment"
+        android:name="com.example.listingcar.ui.BaseFragment"
+        android:label="fragment_base"
+        tools:layout="@layout/fragment_base" >
+        <action
+            android:id="@+id/action_baseFragment_to_carDetailsFragment"
+            app:destination="@id/carDetailsFragment" />
+        <action
+            android:id="@+id/action_baseFragment_to_insertFragment"
+            app:destination="@id/insertFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/carDetailsFragment"
+        android:name="com.example.listingcar.ui.CarDetailsFragment"
+        android:label="fragment_car_details"
+        tools:layout="@layout/fragment_car_details" >
+        <action
+            android:id="@+id/action_carDetailsFragment_to_baseFragment"
+            app:destination="@id/baseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/insertFragment"
+        android:name="com.example.listingcar.ui.InsertFragment"
+        android:label="fragment_insert"
+        tools:layout="@layout/fragment_insert" >
+        <action
+            android:id="@+id/action_insertFragment_to_baseFragment"
+            app:destination="@id/baseFragment" />
+    </fragment>
+</navigation>
